@@ -17,4 +17,13 @@ public class JazzGenre {
 
     @Column(nullable = false, unique = true)
     private String name;
+
+    public JazzGenre(String name) {
+        this.name = name;
+    }
+
+    public static JazzGenre fromString(String name) {
+        return new JazzGenre(name);
+    }
 }
+

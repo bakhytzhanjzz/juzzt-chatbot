@@ -22,7 +22,7 @@ public class JazzArtist {
     private String birthDate;
     private String deathDate;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
             name = "artist_genre",
             joinColumns = @JoinColumn(name = "artist_id"),
